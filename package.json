@@ -34,6 +34,7 @@
     "url": "https://github.com/JordiNodeJS/human-anatomy-explorer/issues"
   },
   "devDependencies": {
+    "terser": "^5.44.1",
     "vite": "^7.2.6"
   },
   "dependencies": {
