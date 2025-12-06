@@ -1,7 +1,7 @@
 {
   "name": "human-anatomy-explorer",
   "version": "1.0.0",
-  "description": "Interactive human anatomy explorer using UBERON ontology",
+  "description": "Explorador interactivo de anatomía humana con ontología UBERON. Aplicación web educativa con diagramas SVG interactivos e información anatómica detallada.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,29 @@
   },
   "keywords": [
     "anatomy",
+    "anatomía",
     "uberon",
     "ontology",
+    "ontología",
     "medical",
-    "education"
+    "medicina",
+    "education",
+    "educación",
+    "spanish",
+    "español",
+    "interactive",
+    "svg"
   ],
-  "author": "",
+  "author": "JordiNodeJS",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordiNodeJS/human-anatomy-explorer.git"
+  },
+  "homepage": "https://github.com/JordiNodeJS/human-anatomy-explorer#readme",
+  "bugs": {
+    "url": "https://github.com/JordiNodeJS/human-anatomy-explorer/issues"
+  },
   "devDependencies": {
     "vite": "^7.2.6"
   },

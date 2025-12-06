@@ -127,11 +127,11 @@ async function loadDiagrams() {
       "/node_modules/@ebi-gene-expression-group/anatomogram/lib/svg/homo_sapiens.brain.svg",
   };
 
-  // Show loading state
+  // Mostrar estado de carga
   elements.maleDiagram.innerHTML =
-    '<div class="loading-indicator"><div class="loading-spinner"></div><span>Loading anatomy...</span></div>';
+    '<div class="loading-indicator"><div class="loading-spinner"></div><span>Cargando anatomía...</span></div>';
   elements.brainDiagram.innerHTML =
-    '<div class="loading-indicator"><div class="loading-spinner"></div><span>Loading brain...</span></div>';
+    '<div class="loading-indicator"><div class="loading-spinner"></div><span>Cargando cerebro...</span></div>';
 
   try {
     // Load both SVGs in parallel
@@ -152,11 +152,11 @@ async function loadDiagrams() {
     setupStructureInteractions(elements.maleDiagram);
     setupStructureInteractions(elements.brainDiagram);
   } catch (error) {
-    console.error("Error loading SVGs:", error);
+    console.error("Error al cargar SVGs:", error);
     elements.maleDiagram.innerHTML =
-      '<p class="error">Failed to load anatomy diagram</p>';
+      '<p class="error">Error al cargar el diagrama anatómico</p>';
     elements.brainDiagram.innerHTML =
-      '<p class="error">Failed to load brain diagram</p>';
+      '<p class="error">Error al cargar el diagrama cerebral</p>';
   }
 }
 
@@ -250,7 +250,7 @@ function setupStructureInteractions(container) {
       hideTooltip();
     });
 
-    // Click event
+    // Evento de clic
     element.addEventListener("click", () => {
       selectStructure(element.id, structureName);
     });
@@ -258,7 +258,7 @@ function setupStructureInteractions(container) {
 }
 
 /**
- * Format UBERON ID to readable name (just the numeric part)
+ * Formatear ID UBERON a nombre legible (solo la parte numérica)
  */
 function formatId(id) {
   return id
@@ -271,14 +271,14 @@ function formatId(id) {
 }
 
 /**
- * Format UBERON ID to a fallback readable name
+ * Formatear ID UBERON a nombre legible como fallback
  */
 function formatIdToName(id) {
   return id.replace("UBERON_", "").replace("CL_", "");
 }
 
 /**
- * Capitalize each word in a string
+ * Capitalizar cada palabra en una cadena
  */
 function capitalizeWords(str) {
   if (!str) return "";
@@ -289,7 +289,7 @@ function capitalizeWords(str) {
 }
 
 /**
- * Set up all event listeners
+ * Configurar todos los listeners de eventos
  */
 function setupEventListeners() {
   // View switcher buttons
@@ -330,7 +330,7 @@ function setupEventListeners() {
 }
 
 /**
- * Switch between anatomy views
+ * Cambiar entre vistas de anatomía
  */
 function switchView(view) {
   audioFeedback.playViewSwitch();
@@ -354,7 +354,7 @@ function switchView(view) {
 }
 
 /**
- * Switch between info tabs
+ * Cambiar entre pestañas de información
  */
 function switchTab(tabId) {
   audioFeedback.playTabSwitch();
@@ -371,7 +371,7 @@ function switchTab(tabId) {
 }
 
 /**
- * Select an anatomical structure
+ * Seleccionar una estructura anatómica
  */
 function selectStructure(id, name) {
   audioFeedback.playSelect();
@@ -478,7 +478,7 @@ function updateInfoPanel(id, svgName = null) {
     .map((condition) => `<li>${condition}</li>`)
     .join("");
 
-  // References tab
+  // Pestaña Referencias
   const uberonUrl = `https://www.ebi.ac.uk/ols4/ontologies/uberon/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252F${id}`;
   elements.ontologyLinks.innerHTML = `
     <a href="${uberonUrl}" target="_blank" rel="noopener">${id}</a>
@@ -491,7 +491,7 @@ function updateInfoPanel(id, svgName = null) {
 }
 
 /**
- * Add a structure to the view history
+ * Agregar una estructura al historial de visualización
  */
 function addToHistory(id, name) {
   // Remove if already in history
@@ -594,7 +594,7 @@ function hideTooltip() {
 }
 
 /**
- * Zoom controls
+ * Controles de zoom
  */
 function zoomDiagram(factor) {
   const newZoom = state.zoom * factor;
@@ -623,7 +623,7 @@ function applyZoom() {
 }
 
 /**
- * Keyboard navigation
+ * Navegación por teclado
  */
 function handleKeyboard(event) {
   // Escape to clear selection
