@@ -36,24 +36,29 @@ El **Explorador de Anatomía Humana** es una aplicación web educativa e interac
 ## 🖼️ Capturas de Pantalla
 
 ### Vista Principal - Cuerpo Completo
+
 ![Vista del cuerpo completo](./public/screenshots/home-view.webp)
-*Diagrama interactivo del cuerpo humano con todas las estructuras principales*
+_Diagrama interactivo del cuerpo humano con todas las estructuras principales_
 
 ### Detalle de Estructura - Información del Hígado
+
 ![Detalle de estructura anatómica](./public/screenshots/structure-detail.webp)
-*Panel informativo mostrando descripción y datos clave de una estructura*
+_Panel informativo mostrando descripción y datos clave de una estructura_
 
 ### Vista del Cerebro - Tálamo
+
 ![Vista detallada del cerebro](./public/screenshots/brain-view.webp)
-*Diagrama especializado del cerebro con estructuras neuroanatómicas*
+_Diagrama especializado del cerebro con estructuras neuroanatómicas_
 
 ### Pestaña Anatomía
+
 ![Pestaña de anatomía](./public/screenshots/anatomy-tab.webp)
-*Información sobre ubicación, estructura y órganos relacionados*
+_Información sobre ubicación, estructura y órganos relacionados_
 
 ### Pestaña Clínica
+
 ![Pestaña de información clínica](./public/screenshots/clinical-tab.webp)
-*Significado clínico y condiciones médicas asociadas*
+_Significado clínico y condiciones médicas asociadas_
 
 ---
 
@@ -82,10 +87,10 @@ La aplicación estará disponible en `http://localhost:3000`
 
 ### Comandos Disponibles
 
-| Comando | Descripción |
-|---------|-------------|
-| `pnpm dev` | Inicia el servidor de desarrollo |
-| `pnpm build` | Genera la versión de producción |
+| Comando        | Descripción                           |
+| -------------- | ------------------------------------- |
+| `pnpm dev`     | Inicia el servidor de desarrollo      |
+| `pnpm build`   | Genera la versión de producción       |
 | `pnpm preview` | Previsualiza la versión de producción |
 
 ---
@@ -125,37 +130,43 @@ human-anatomy-explorer/
 La aplicación incluye información detallada sobre más de 20 estructuras anatómicas principales, incluyendo:
 
 ### 🧠 Sistema Nervioso
+
 - Cerebro, Corteza Cerebral, Hipocampo
 - Tálamo, Hipotálamo, Cerebelo
 - Lóbulos Frontal y Temporal
 
 ### ❤️ Sistema Cardiovascular
+
 - Corazón, Pulmones
 
 ### 🫁 Sistema Digestivo
+
 - Estómago, Hígado, Colon
 - Páncreas, Bazo
 
 ### 🔬 Sistema Urinario
+
 - Riñón, Vejiga Urinaria
 
 ### ⚗️ Sistema Endocrino
+
 - Glándula Tiroides, Glándula Suprarrenal
 
 ### 👁️ Órganos Sensoriales
+
 - Ojo
 
 ---
 
 ## ⌨️ Atajos de Teclado
 
-| Tecla | Acción |
-|-------|--------|
-| `1-4` | Cambiar entre pestañas (Resumen, Anatomía, Clínica, Referencias) |
-| `+` o `=` | Acercar zoom |
-| `-` | Alejar zoom |
-| `0` | Restablecer zoom |
-| `Esc` | Limpiar selección |
+| Tecla     | Acción                                                           |
+| --------- | ---------------------------------------------------------------- |
+| `1-4`     | Cambiar entre pestañas (Resumen, Anatomía, Clínica, Referencias) |
+| `+` o `=` | Acercar zoom                                                     |
+| `-`       | Alejar zoom                                                      |
+| `0`       | Restablecer zoom                                                 |
+| `Esc`     | Limpiar selección                                                |
 
 ---
 
