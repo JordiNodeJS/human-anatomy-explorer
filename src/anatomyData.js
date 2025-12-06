@@ -1,64 +1,64 @@
 /**
- * Comprehensive UBERON ontology data for human anatomy structures
- * Contains definitions, anatomical details, clinical significance, and references
+ * Datos completos de ontología UBERON para estructuras de anatomía humana
+ * Contiene definiciones, detalles anatómicos, significado clínico y referencias
  */
 
 export const anatomyData = {
-  // === BRAIN STRUCTURES ===
+  // === ESTRUCTURAS CEREBRALES ===
   UBERON_0000955: {
-    name: "Brain",
+    name: "Cerebro",
     description:
-      "The central organ of the nervous system, composed of billions of neurons and glial cells. The brain processes sensory information, controls motor functions, and is the seat of consciousness, cognition, and emotion.",
+      "El órgano central del sistema nervioso, compuesto por miles de millones de neuronas y células gliales. El cerebro procesa información sensorial, controla funciones motoras y es la sede de la conciencia, cognición y emoción.",
     location:
-      "Located within the cranial cavity of the skull, protected by the meninges and surrounded by cerebrospinal fluid.",
+      "Ubicado dentro de la cavidad craneal del cráneo, protegido por las meninges y rodeado de líquido cefalorraquídeo.",
     anatomy:
-      "Divided into three main regions: the forebrain (cerebrum and diencephalon), midbrain (mesencephalon), and hindbrain (cerebellum, pons, and medulla oblongata). Weighs approximately 1.4 kg in adults.",
+      "Dividido en tres regiones principales: el prosencéfalo (cerebro y diencéfalo), mesencéfalo y rombencéfalo (cerebelo, puente y bulbo raquídeo). Pesa aproximadamente 1,4 kg en adultos.",
     keyFacts: [
-      "Contains approximately 86 billion neurons",
-      "Uses about 20% of the body's oxygen and energy",
-      "Generates enough electricity to power a small lightbulb",
-      "The cerebral cortex contains about 16 billion neurons",
+      "Contiene aproximadamente 86 mil millones de neuronas",
+      "Usa cerca del 20% del oxígeno y energía del cuerpo",
+      "Genera suficiente electricidad para encender una bombilla pequeña",
+      "La corteza cerebral contiene unos 16 mil millones de neuronas",
     ],
     clinicalSignificance:
-      "Central to virtually all neurological and psychiatric conditions. Damage or dysfunction can result in motor deficits, sensory loss, cognitive impairment, personality changes, and altered consciousness.",
+      "Central para prácticamente todas las condiciones neurológicas y psiquiátricas. El daño o disfunción puede resultar en déficits motores, pérdida sensorial, deterioro cognitivo, cambios de personalidad y alteración de la conciencia.",
     conditions: [
-      "Stroke (cerebrovascular accident)",
-      "Traumatic brain injury",
-      "Alzheimer's disease",
-      "Parkinson's disease",
-      "Brain tumors",
-      "Epilepsy",
+      "Accidente cerebrovascular (ictus)",
+      "Traumatismo craneoencefálico",
+      "Enfermedad de Alzheimer",
+      "Enfermedad de Parkinson",
+      "Tumores cerebrales",
+      "Epilepsia",
     ],
     relatedStructures: ["UBERON_0000956", "UBERON_0002037", "UBERON_0001898"],
     furtherReading: [
-      "Gray's Anatomy, 42nd Edition - Chapter 22: Brain",
-      "Principles of Neural Science, 6th Edition - Kandel et al.",
+      "Gray's Anatomy, 42ª Edición - Capítulo 22: Cerebro",
+      "Principles of Neural Science, 6ª Edición - Kandel et al.",
       "The Human Brain Book - DK Publishing",
     ],
   },
 
   UBERON_0000956: {
-    name: "Cerebral Cortex",
+    name: "Corteza Cerebral",
     description:
-      "The outermost layer of the cerebrum, composed of folded grey matter. It is responsible for higher brain functions including perception, cognition, language, memory, and voluntary movement.",
+      "La capa más externa del cerebro, compuesta de materia gris plegada. Es responsable de las funciones cerebrales superiores incluyendo percepción, cognición, lenguaje, memoria y movimiento voluntario.",
     location:
-      "Forms the outer surface of the cerebral hemispheres, covering the underlying white matter and deeper brain structures.",
+      "Forma la superficie externa de los hemisferios cerebrales, cubriendo la sustancia blanca subyacente y las estructuras cerebrales más profundas.",
     anatomy:
-      "Approximately 2-4 mm thick, with a surface area of about 2,500 cm² when unfolded. Organized into six distinct layers of neurons with specific functions. Contains gyri (ridges) and sulci (grooves).",
+      "Aproximadamente 2-4 mm de espesor, con un área superficial de unos 2.500 cm² cuando se despliega. Organizada en seis capas distintas de neuronas con funciones específicas. Contiene giros (crestas) y surcos.",
     keyFacts: [
-      "Contains about 16 billion neurons",
-      "Divided into four lobes: frontal, parietal, temporal, and occipital",
-      "The neocortex makes up about 90% of the cerebral cortex",
-      "Larger in humans relative to brain size compared to other mammals",
+      "Contiene aproximadamente 16 mil millones de neuronas",
+      "Dividida en cuatro lóbulos: frontal, parietal, temporal y occipital",
+      "El neocórtex constituye aproximadamente el 90% de la corteza cerebral",
+      "Más grande en humanos en relación al tamaño del cerebro comparado con otros mamíferos",
     ],
     clinicalSignificance:
-      "Damage to specific cortical regions produces predictable deficits. The cortex is affected in dementia, strokes, and many psychiatric conditions.",
+      "El daño a regiones corticales específicas produce déficits predecibles. La corteza se ve afectada en demencia, accidentes cerebrovasculares y muchas condiciones psiquiátricas.",
     conditions: [
-      "Cortical strokes",
-      "Frontotemporal dementia",
-      "Aphasia",
+      "Accidentes cerebrovasculares corticales",
+      "Demencia frontotemporal",
+      "Afasia",
       "Apraxia",
-      "Cortical blindness",
+      "Ceguera cortical",
     ],
     relatedStructures: ["UBERON_0000955", "UBERON_0001870", "UBERON_0001871"],
     furtherReading: [
@@ -68,26 +68,26 @@ export const anatomyData = {
   },
 
   UBERON_0001870: {
-    name: "Frontal Cortex",
+    name: "Corteza Frontal",
     description:
-      "The anterior portion of the cerebral cortex, crucial for executive functions, decision-making, planning, personality, and voluntary motor control.",
+      "La porción anterior de la corteza cerebral, crucial para funciones ejecutivas, toma de decisiones, planificación, personalidad y control motor voluntario.",
     location:
-      "Anterior to the central sulcus and superior to the lateral sulcus in each cerebral hemisphere.",
+      "Anterior al surco central y superior al surco lateral en cada hemisferio cerebral.",
     anatomy:
-      "Contains the primary motor cortex (precentral gyrus), premotor cortex, supplementary motor area, and prefrontal cortex. The prefrontal cortex is highly developed in humans.",
+      "Contiene la corteza motora primaria (giro precentral), corteza premotora, área motora suplementaria y corteza prefrontal. La corteza prefrontal está altamente desarrollada en humanos.",
     keyFacts: [
-      "Represents about 1/3 of the total cortical surface area",
-      "Contains Broca's area for speech production (left hemisphere)",
-      "Last brain region to fully mature (around age 25)",
-      "Critical for working memory and attention",
+      "Representa aproximadamente 1/3 del área superficial cortical total",
+      "Contiene el área de Broca para la producción del habla (hemisferio izquierdo)",
+      "Última región cerebral en madurar completamente (alrededor de los 25 años)",
+      "Crítica para la memoria de trabajo y atención",
     ],
     clinicalSignificance:
-      "Frontal lobe damage can cause dramatic personality changes, impaired judgment, motor deficits, and speech problems. Important in schizophrenia and ADHD research.",
+      "El daño del lóbulo frontal puede causar cambios dramáticos de personalidad, juicio deteriorado, déficits motores y problemas del habla. Importante en la investigación de esquizofrenia y TDAH.",
     conditions: [
-      "Frontotemporal dementia",
-      "Traumatic brain injury effects",
-      "Broca's aphasia",
-      "Frontal lobe syndrome",
+      "Demencia frontotemporal",
+      "Efectos de traumatismo craneoencefálico",
+      "Afasia de Broca",
+      "Síndrome del lóbulo frontal",
     ],
     relatedStructures: ["UBERON_0000956", "UBERON_0001871", "UBERON_0002037"],
     furtherReading: [
@@ -97,26 +97,26 @@ export const anatomyData = {
   },
 
   UBERON_0001871: {
-    name: "Temporal Lobe",
+    name: "Lóbulo Temporal",
     description:
-      "A major lobe of the cerebral cortex involved in auditory processing, memory formation, language comprehension, and emotional responses.",
+      "Un lóbulo mayor de la corteza cerebral involucrado en el procesamiento auditivo, formación de memoria, comprensión del lenguaje y respuestas emocionales.",
     location:
-      "Located beneath the lateral sulcus on both cerebral hemispheres, anterior to the occipital lobe and inferior to the parietal lobe.",
+      "Ubicado debajo del surco lateral en ambos hemisferios cerebrales, anterior al lóbulo occipital e inferior al lóbulo parietal.",
     anatomy:
-      "Contains the primary auditory cortex, Wernicke's area (language comprehension), hippocampus (memory), and amygdala (emotion). The medial temporal lobe is crucial for declarative memory.",
+      "Contiene la corteza auditiva primaria, área de Wernicke (comprensión del lenguaje), hipocampo (memoria) y amígdala (emoción). El lóbulo temporal medial es crucial para la memoria declarativa.",
     keyFacts: [
-      "Houses the hippocampus, essential for forming new memories",
-      "Contains Wernicke's area for language comprehension",
-      "The amygdala processes emotional responses and fear",
-      "Important for face recognition (fusiform face area)",
+      "Alberga el hipocampo, esencial para formar nuevos recuerdos",
+      "Contiene el área de Wernicke para la comprensión del lenguaje",
+      "La amígdala procesa respuestas emocionales y miedo",
+      "Importante para el reconocimiento facial (área fusiforme de caras)",
     ],
     clinicalSignificance:
-      "Temporal lobe epilepsy is the most common form of focal epilepsy. Damage can cause memory impairment, auditory processing problems, and language deficits.",
+      "La epilepsia del lóbulo temporal es la forma más común de epilepsia focal. El daño puede causar deterioro de memoria, problemas de procesamiento auditivo y déficits del lenguaje.",
     conditions: [
-      "Temporal lobe epilepsy",
-      "Wernicke's aphasia",
-      "Amnesia (medial temporal damage)",
-      "Auditory agnosia",
+      "Epilepsia del lóbulo temporal",
+      "Afasia de Wernicke",
+      "Amnesia (daño temporal medial)",
+      "Agnosia auditiva",
     ],
     relatedStructures: ["UBERON_0000956", "UBERON_0001870", "UBERON_0002421"],
     furtherReading: [
@@ -126,27 +126,27 @@ export const anatomyData = {
   },
 
   UBERON_0001898: {
-    name: "Hypothalamus",
+    name: "Hipotálamo",
     description:
-      "A small but vital region of the brain that controls the autonomic nervous system and the endocrine system. It regulates body temperature, hunger, thirst, sleep, and circadian rhythms.",
+      "Una región pequeña pero vital del cerebro que controla el sistema nervioso autónomo y el sistema endocrino. Regula la temperatura corporal, hambre, sed, sueño y ritmos circadianos.",
     location:
-      "Located below the thalamus and above the brainstem, forming the floor and part of the lateral walls of the third ventricle.",
+      "Ubicado debajo del tálamo y encima del tronco encefálico, formando el piso y parte de las paredes laterales del tercer ventrículo.",
     anatomy:
-      "Contains numerous nuclei including the suprachiasmatic nucleus (circadian rhythm), paraventricular nucleus (hormone release), and arcuate nucleus (appetite). Connected to the pituitary gland via the infundibulum.",
+      "Contiene numerosos núcleos incluyendo el núcleo supraquiasmático (ritmo circadiano), núcleo paraventricular (liberación hormonal) y núcleo arcuato (apetito). Conectado a la glándula pituitaria mediante el infundíbulo.",
     keyFacts: [
-      "Weighs only about 4 grams (less than 1% of brain weight)",
-      "Controls release of hormones from the pituitary gland",
-      "The suprachiasmatic nucleus is the master circadian clock",
-      "Contains neurons sensitive to blood glucose levels",
+      "Pesa solo aproximadamente 4 gramos (menos del 1% del peso cerebral)",
+      "Controla la liberación de hormonas de la glándula pituitaria",
+      "El núcleo supraquiasmático es el reloj circadiano maestro",
+      "Contiene neuronas sensibles a los niveles de glucosa en sangre",
     ],
     clinicalSignificance:
-      "Hypothalamic dysfunction can cause profound disturbances in homeostasis, affecting temperature regulation, appetite, sleep patterns, and hormone balance.",
+      "La disfunción hipotalámica puede causar alteraciones profundas en la homeostasis, afectando la regulación de temperatura, apetito, patrones de sueño y equilibrio hormonal.",
     conditions: [
-      "Hypothalamic obesity",
-      "Diabetes insipidus",
-      "Sleep disorders",
-      "Hypothalamic tumors",
-      "Kallmann syndrome",
+      "Obesidad hipotalámica",
+      "Diabetes insípida",
+      "Trastornos del sueño",
+      "Tumores hipotalámicos",
+      "Síndrome de Kallmann",
     ],
     relatedStructures: ["UBERON_0000955", "UBERON_0001897", "UBERON_0002037"],
     furtherReading: [
@@ -156,26 +156,26 @@ export const anatomyData = {
   },
 
   UBERON_0001897: {
-    name: "Thalamus",
+    name: "Tálamo",
     description:
-      "A bilateral structure that serves as the main relay station for sensory and motor signals to the cerebral cortex. It also plays roles in consciousness, sleep, and alertness.",
+      "Una estructura bilateral que sirve como la principal estación de relevo para señales sensoriales y motoras hacia la corteza cerebral. También juega roles en la conciencia, sueño y alerta.",
     location:
-      "Located in the center of the brain, above the brainstem and between the cerebral hemispheres, forming most of the lateral walls of the third ventricle.",
+      "Ubicado en el centro del cerebro, encima del tronco encefálico y entre los hemisferios cerebrales, formando la mayor parte de las paredes laterales del tercer ventrículo.",
     anatomy:
-      "Consists of numerous nuclei grouped into anterior, medial, lateral, and posterior regions. Each nucleus has specific connections with cortical areas and processes different types of information.",
+      "Consiste en numerosos núcleos agrupados en regiones anterior, medial, lateral y posterior. Cada núcleo tiene conexiones específicas con áreas corticales y procesa diferentes tipos de información.",
     keyFacts: [
-      "All sensory pathways (except olfaction) relay through the thalamus",
-      "Contains about 50-60 different nuclei",
-      "Critical for attention and consciousness",
-      "Involved in regulating sleep-wake cycles",
+      "Todas las vías sensoriales (excepto olfato) pasan por el tálamo",
+      "Contiene aproximadamente 50-60 núcleos diferentes",
+      "Crítico para la atención y conciencia",
+      "Involucrado en la regulación del ciclo sueño-vigilia",
     ],
     clinicalSignificance:
-      "Thalamic lesions can cause sensory loss, movement disorders, memory impairment, and alterations in consciousness. Important in chronic pain syndromes.",
+      "Las lesiones talámicas pueden causar pérdida sensorial, trastornos del movimiento, deterioro de memoria y alteraciones de la conciencia. Importante en síndromes de dolor crónico.",
     conditions: [
-      "Thalamic pain syndrome",
-      "Fatal familial insomnia",
-      "Thalamic aphasia",
-      "Movement disorders",
+      "Síndrome talámico doloroso",
+      "Insomnio familiar fatal",
+      "Afasia talámica",
+      "Trastornos del movimiento",
     ],
     relatedStructures: ["UBERON_0000955", "UBERON_0001898", "UBERON_0002421"],
     furtherReading: [
@@ -185,27 +185,27 @@ export const anatomyData = {
   },
 
   UBERON_0002037: {
-    name: "Cerebellum",
+    name: "Cerebelo",
     description:
-      'The "little brain" located at the back of the skull, essential for motor coordination, balance, posture, and motor learning. It fine-tunes movements initiated by other brain regions.',
+      'El "pequeño cerebro" ubicado en la parte posterior del cráneo, esencial para la coordinación motora, equilibrio, postura y aprendizaje motor. Afina los movimientos iniciados por otras regiones cerebrales.',
     location:
-      "Situated in the posterior cranial fossa, beneath the occipital lobes of the cerebrum and behind the brainstem.",
+      "Situado en la fosa craneal posterior, debajo de los lóbulos occipitales del cerebro y detrás del tronco encefálico.",
     anatomy:
-      "Divided into two hemispheres connected by the vermis. Contains three main lobes and a highly folded cortex. The cerebellar cortex contains more neurons than the rest of the brain combined.",
+      "Dividido en dos hemisferios conectados por el vermis. Contiene tres lóbulos principales y una corteza altamente plegada. La corteza cerebelosa contiene más neuronas que el resto del cerebro combinado.",
     keyFacts: [
-      "Contains about 69 billion neurons (80% of brain's total)",
-      "Receives input from 200 million nerve fibers",
-      "Coordinates timing and precision of movements",
-      "Involved in motor learning and automaticity",
+      "Contiene aproximadamente 69 mil millones de neuronas (80% del total del cerebro)",
+      "Recibe entrada de 200 millones de fibras nerviosas",
+      "Coordina el tiempo y precisión de los movimientos",
+      "Involucrado en el aprendizaje motor y automaticidad",
     ],
     clinicalSignificance:
-      "Cerebellar damage causes ataxia, dysarthria, nystagmus, and intention tremor. Affects coordination rather than strength. Important in alcoholic brain damage.",
+      "El daño cerebeloso causa ataxia, disartria, nistagmo y temblor intencional. Afecta la coordinación más que la fuerza. Importante en el daño cerebral alcohólico.",
     conditions: [
-      "Cerebellar ataxia",
-      "Spinocerebellar ataxias",
-      "Cerebellar stroke",
-      "Cerebellar tumors",
-      "Alcoholic cerebellar degeneration",
+      "Ataxia cerebelosa",
+      "Ataxias espinocerebelosas",
+      "Accidente cerebrovascular cerebeloso",
+      "Tumores cerebelosos",
+      "Degeneración cerebelosa alcohólica",
     ],
     relatedStructures: ["UBERON_0000955", "UBERON_0001896", "UBERON_0001898"],
     furtherReading: [
@@ -215,26 +215,26 @@ export const anatomyData = {
   },
 
   UBERON_0002421: {
-    name: "Hippocampus",
+    name: "Hipocampo",
     description:
-      "A seahorse-shaped structure in the medial temporal lobe essential for the formation of new declarative memories and spatial navigation.",
+      "Una estructura con forma de caballito de mar en el lóbulo temporal medial, esencial para la formación de nuevos recuerdos declarativos y navegación espacial.",
     location:
-      "Located in the medial temporal lobe, curving around the thalamus. Part of the limbic system.",
+      "Ubicado en el lóbulo temporal medial, curvándose alrededor del tálamo. Parte del sistema límbico.",
     anatomy:
-      "Contains distinct subregions: dentate gyrus, CA1-CA4 fields, and subiculum. Features a unique circuit for memory processing and is one of few brain areas with adult neurogenesis.",
+      "Contiene subregiones distintas: giro dentado, campos CA1-CA4 y subículo. Presenta un circuito único para el procesamiento de memoria y es una de las pocas áreas cerebrales con neurogénesis adulta.",
     keyFacts: [
-      "One of the first regions affected in Alzheimer's disease",
-      "Contains place cells for spatial memory and navigation",
-      "One of the few sites of adult neurogenesis",
-      "Essential for converting short-term to long-term memories",
+      "Una de las primeras regiones afectadas en la enfermedad de Alzheimer",
+      "Contiene células de lugar para la memoria espacial y navegación",
+      "Uno de los pocos sitios de neurogénesis adulta",
+      "Esencial para convertir memorias a corto plazo en memorias a largo plazo",
     ],
     clinicalSignificance:
-      "Hippocampal damage causes anterograde amnesia. Atrophy is a hallmark of Alzheimer's disease. Important in temporal lobe epilepsy.",
+      "El daño hipocampal causa amnesia anterógrada. La atrofia es un sello distintivo de la enfermedad de Alzheimer. Importante en la epilepsia del lóbulo temporal.",
     conditions: [
-      "Alzheimer's disease",
-      "Temporal lobe epilepsy",
-      "Transient global amnesia",
-      "Hypoxic brain injury",
+      "Enfermedad de Alzheimer",
+      "Epilepsia del lóbulo temporal",
+      "Amnesia global transitoria",
+      "Lesión cerebral hipóxica",
     ],
     relatedStructures: ["UBERON_0001871", "UBERON_0002421", "UBERON_0000955"],
     furtherReading: [
@@ -245,61 +245,61 @@ export const anatomyData = {
 
   // === CARDIOVASCULAR ===
   UBERON_0000948: {
-    name: "Heart",
+    name: "Corazón",
     description:
-      "A muscular organ that pumps blood throughout the body via the circulatory system, supplying oxygen and nutrients while removing metabolic waste.",
+      "Un órgano muscular que bombea sangre a través del cuerpo mediante el sistema circulatorio, suministrando oxígeno y nutrientes mientras elimina desechos metabólicos.",
     location:
-      "Located in the mediastinum of the thoracic cavity, between the lungs, slightly left of the midline, posterior to the sternum.",
+      "Ubicado en el mediastino de la cavidad torácica, entre los pulmones, ligeramente a la izquierda de la línea media, posterior al esternón.",
     anatomy:
-      "A four-chambered organ consisting of two atria and two ventricles. Contains four valves that ensure unidirectional blood flow. Surrounded by the pericardium. Weighs 250-350 grams in adults.",
+      "Un órgano de cuatro cámaras que consiste en dos aurículas y dos ventrículos. Contiene cuatro válvulas que aseguran el flujo sanguíneo unidireccional. Rodeado por el pericardio. Pesa 250-350 gramos en adultos.",
     keyFacts: [
-      "Beats approximately 100,000 times per day",
-      "Pumps about 5 liters of blood per minute at rest",
-      "The heart has its own electrical conduction system",
-      "Coronary arteries supply blood to the heart muscle itself",
+      "Late aproximadamente 100.000 veces al día",
+      "Bombea unos 5 litros de sangre por minuto en reposo",
+      "El corazón tiene su propio sistema de conducción eléctrica",
+      "Las arterias coronarias suministran sangre al músculo cardíaco",
     ],
     clinicalSignificance:
-      "Heart disease is the leading cause of death globally. The heart is subject to numerous conditions affecting its rhythm, muscle, valves, and blood supply.",
+      "La enfermedad cardíaca es la principal causa de muerte a nivel mundial. El corazón está sujeto a numerosas condiciones que afectan su ritmo, músculo, válvulas y suministro sanguíneo.",
     conditions: [
-      "Coronary artery disease",
-      "Heart failure",
-      "Arrhythmias (atrial fibrillation, ventricular tachycardia)",
-      "Valvular heart disease",
-      "Cardiomyopathy",
-      "Myocardial infarction (heart attack)",
+      "Enfermedad arterial coronaria",
+      "Insuficiencia cardíaca",
+      "Arritmias (fibrilación auricular, taquicardia ventricular)",
+      "Valvulopatías",
+      "Cardiomiopatía",
+      "Infarto de miocardio",
     ],
     relatedStructures: ["UBERON_0002048", "UBERON_0000178", "UBERON_0001981"],
     furtherReading: [
       "Braunwald's Heart Disease",
       "Hurst's The Heart",
-      "Gray's Anatomy - Cardiovascular System",
+      "Gray's Anatomy - Sistema Cardiovascular",
     ],
   },
 
-  // === RESPIRATORY ===
+  // === RESPIRATORIO ===
   UBERON_0002048: {
-    name: "Lungs",
+    name: "Pulmones",
     description:
-      "Paired respiratory organs that facilitate gas exchange, taking in oxygen and expelling carbon dioxide. Essential for cellular respiration throughout the body.",
+      "Órganos respiratorios pares que facilitan el intercambio gaseoso, tomando oxígeno y expulsando dióxido de carbono. Esenciales para la respiración celular en todo el cuerpo.",
     location:
-      "Occupy most of the thoracic cavity, on either side of the heart and mediastinum. Extend from above the clavicles to the diaphragm.",
+      "Ocupan la mayor parte de la cavidad torácica, a cada lado del corazón y el mediastino. Se extienden desde encima de las clavículas hasta el diafragma.",
     anatomy:
-      "The right lung has three lobes, the left has two (to accommodate the heart). Each lung is divided into bronchopulmonary segments. Contains approximately 300-500 million alveoli for gas exchange.",
+      "El pulmón derecho tiene tres lóbulos, el izquierdo tiene dos (para acomodar el corazón). Cada pulmón está dividido en segmentos broncopulmonares. Contiene aproximadamente 300-500 millones de alvéolos para el intercambio gaseoso.",
     keyFacts: [
-      "Total surface area of alveoli is about 70 m² (size of a tennis court)",
-      "Process about 10,000 liters of air daily",
-      "The right lung is slightly larger than the left",
-      "Alveolar walls are only one cell thick for efficient gas exchange",
+      "El área superficial total de los alvéolos es de unos 70 m² (tamaño de una cancha de tenis)",
+      "Procesan aproximadamente 10.000 litros de aire diariamente",
+      "El pulmón derecho es ligeramente más grande que el izquierdo",
+      "Las paredes alveolares tienen solo una célula de espesor para un intercambio gaseoso eficiente",
     ],
     clinicalSignificance:
-      "Lung diseases are among the most common medical conditions worldwide. The lungs are vulnerable to infection, inflammation, and damage from inhaled substances.",
+      "Las enfermedades pulmonares están entre las condiciones médicas más comunes a nivel mundial. Los pulmones son vulnerables a infecciones, inflamación y daño por sustancias inhaladas.",
     conditions: [
-      "Pneumonia",
-      "Chronic obstructive pulmonary disease (COPD)",
-      "Asthma",
-      "Lung cancer",
-      "Pulmonary embolism",
-      "Pulmonary fibrosis",
+      "Neumonía",
+      "Enfermedad pulmonar obstructiva crónica (EPOC)",
+      "Asma",
+      "Cáncer de pulmón",
+      "Embolia pulmonar",
+      "Fibrosis pulmonar",
     ],
     relatedStructures: ["UBERON_0000948", "UBERON_0000977", "UBERON_0001043"],
     furtherReading: [
@@ -309,29 +309,29 @@ export const anatomyData = {
     ],
   },
 
-  // === DIGESTIVE ===
+  // === DIGESTIVO ===
   UBERON_0000945: {
-    name: "Stomach",
+    name: "Estómago",
     description:
-      "A muscular, J-shaped organ of the digestive system that stores food, mixes it with gastric juices, and begins protein digestion through the action of pepsin and hydrochloric acid.",
+      "Un órgano muscular en forma de J del sistema digestivo que almacena alimentos, los mezcla con jugos gástricos y comienza la digestión de proteínas mediante la acción de pepsina y ácido clorhídrico.",
     location:
-      "Located in the upper left quadrant of the abdomen, between the esophagus and small intestine, beneath the diaphragm.",
+      "Ubicado en el cuadrante superior izquierdo del abdomen, entre el esófago y el intestino delgado, debajo del diafragma.",
     anatomy:
-      "Divided into cardia, fundus, body, and pylorus regions. Has three muscle layers for churning. Lined with mucosa containing gastric glands that secrete acid, enzymes, and protective mucus.",
+      "Dividido en regiones: cardias, fondo, cuerpo y píloro. Tiene tres capas musculares para la agitación. Revestido con mucosa que contiene glándulas gástricas que secretan ácido, enzimas y moco protector.",
     keyFacts: [
-      "Can expand to hold 1-1.5 liters of food",
-      "Produces 2-3 liters of gastric juice daily",
-      "Gastric acid has a pH of 1.5-3.5",
-      "Complete emptying takes 4-5 hours after a meal",
+      "Puede expandirse para contener 1-1,5 litros de alimento",
+      "Produce 2-3 litros de jugo gástrico diariamente",
+      "El ácido gástrico tiene un pH de 1,5-3,5",
+      "El vaciado completo toma 4-5 horas después de una comida",
     ],
     clinicalSignificance:
-      "The stomach is susceptible to ulceration, infection (H. pylori), and cancer. Acid production can cause reflux and damage to the esophagus.",
+      "El estómago es susceptible a ulceración, infección (H. pylori) y cáncer. La producción de ácido puede causar reflujo y daño al esófago.",
     conditions: [
-      "Peptic ulcer disease",
+      "Enfermedad ulcerosa péptica",
       "Gastritis",
-      "Gastric cancer",
-      "Gastroparesis",
-      "Helicobacter pylori infection",
+      "Cáncer gástrico",
+      "Gastroparesia",
+      "Infección por Helicobacter pylori",
     ],
     relatedStructures: ["UBERON_0002107", "UBERON_0001043", "UBERON_0001155"],
     furtherReading: [
@@ -341,27 +341,27 @@ export const anatomyData = {
   },
 
   UBERON_0002107: {
-    name: "Liver",
+    name: "Hígado",
     description:
-      "The largest solid organ in the body, performing over 500 vital functions including metabolism, detoxification, protein synthesis, and bile production.",
+      "El órgano sólido más grande del cuerpo, que realiza más de 500 funciones vitales incluyendo metabolismo, desintoxicación, síntesis de proteínas y producción de bilis.",
     location:
-      "Occupies the right hypochondriac and epigastric regions of the abdomen, protected by the lower rib cage. Weighs approximately 1.5 kg.",
+      "Ocupa las regiones hipocondríaca derecha y epigástrica del abdomen, protegido por la caja torácica inferior. Pesa aproximadamente 1,5 kg.",
     anatomy:
-      "Divided into right and left lobes. Receives dual blood supply from the hepatic artery and portal vein. Contains hepatocytes organized into lobules around central veins.",
+      "Dividido en lóbulos derecho e izquierdo. Recibe doble suministro sanguíneo de la arteria hepática y la vena porta. Contiene hepatocitos organizados en lóbulos alrededor de venas centrales.",
     keyFacts: [
-      "Receives about 25% of cardiac output",
-      "Can regenerate up to 75% of its mass",
-      "Produces 500-1000 mL of bile daily",
-      "Contains about 100 billion hepatocytes",
+      "Recibe aproximadamente el 25% del gasto cardíaco",
+      "Puede regenerar hasta el 75% de su masa",
+      "Produce 500-1000 mL de bilis diariamente",
+      "Contiene aproximadamente 100 mil millones de hepatocitos",
     ],
     clinicalSignificance:
-      "The liver is essential for life and has remarkable regenerative capacity. Liver disease is common and can progress from inflammation to cirrhosis and failure.",
+      "El hígado es esencial para la vida y tiene una notable capacidad regenerativa. La enfermedad hepática es común y puede progresar de inflamación a cirrosis e insuficiencia.",
     conditions: [
-      "Hepatitis (viral, alcoholic, autoimmune)",
-      "Cirrhosis",
-      "Non-alcoholic fatty liver disease",
-      "Hepatocellular carcinoma",
-      "Liver failure",
+      "Hepatitis (viral, alcohólica, autoinmune)",
+      "Cirrosis",
+      "Enfermedad del hígado graso no alcohólico",
+      "Carcinoma hepatocelular",
+      "Insuficiencia hepática",
     ],
     relatedStructures: ["UBERON_0000945", "UBERON_0001155", "UBERON_0002106"],
     furtherReading: [
@@ -374,25 +374,25 @@ export const anatomyData = {
   UBERON_0001155: {
     name: "Colon",
     description:
-      "The large intestine, responsible for absorbing water and electrolytes from digested food residue, forming and storing feces, and housing the gut microbiome.",
+      "El intestino grueso, responsable de absorber agua y electrolitos de los residuos alimenticios digeridos, formar y almacenar heces, y albergar el microbioma intestinal.",
     location:
-      "Frames the small intestine in the abdominal cavity, extending from the cecum to the rectum. Approximately 1.5 meters long.",
+      "Enmarca el intestino delgado en la cavidad abdominal, extendiéndose desde el ciego hasta el recto. Aproximadamente 1,5 metros de longitud.",
     anatomy:
-      "Divided into cecum, ascending, transverse, descending, and sigmoid colon. Has haustra (pouches) and taeniae coli (muscle bands). Contains billions of bacteria forming the gut microbiome.",
+      "Dividido en ciego, colon ascendente, transverso, descendente y sigmoideo. Tiene haustras (bolsas) y tenias coli (bandas musculares). Contiene miles de millones de bacterias que forman el microbioma intestinal.",
     keyFacts: [
-      "Absorbs about 1.5 liters of water daily",
-      "Contains trillions of bacteria (gut microbiome)",
-      "Transit time through colon is 12-36 hours",
-      "The appendix is attached to the cecum",
+      "Absorbe aproximadamente 1,5 litros de agua diariamente",
+      "Contiene billones de bacterias (microbioma intestinal)",
+      "El tiempo de tránsito a través del colon es de 12-36 horas",
+      "El apéndice está unido al ciego",
     ],
     clinicalSignificance:
-      "Colorectal cancer is the third most common cancer. The colon is affected by inflammatory bowel disease and is essential for microbiome health.",
+      "El cáncer colorrectal es el tercer cáncer más común. El colon se ve afectado por la enfermedad inflamatoria intestinal y es esencial para la salud del microbioma.",
     conditions: [
-      "Colorectal cancer",
-      "Ulcerative colitis",
-      "Crohn's disease (can affect colon)",
-      "Diverticulosis and diverticulitis",
-      "Irritable bowel syndrome",
+      "Cáncer colorrectal",
+      "Colitis ulcerosa",
+      "Enfermedad de Crohn (puede afectar el colon)",
+      "Diverticulosis y diverticulitis",
+      "Síndrome del intestino irritable",
     ],
     relatedStructures: ["UBERON_0000945", "UBERON_0002107", "UBERON_0001052"],
     furtherReading: [
@@ -401,61 +401,60 @@ export const anatomyData = {
     ],
   },
 
-  // === URINARY ===
+  // === URINARIO ===
   UBERON_0002113: {
-    name: "Kidney",
+    name: "Riñón",
     description:
-      "Paired bean-shaped organs that filter blood, remove waste products, regulate fluid and electrolyte balance, and produce hormones including renin and erythropoietin.",
+      "Órganos pares en forma de frijol que filtran la sangre, eliminan productos de desecho, regulan el equilibrio de líquidos y electrolitos, y producen hormonas incluyendo renina y eritropoyetina.",
     location:
-      "Located retroperitoneally in the posterior abdominal wall, the right kidney slightly lower than the left due to the liver.",
+      "Ubicados retroperitonealmente en la pared abdominal posterior, el riñón derecho ligeramente más bajo que el izquierdo debido al hígado.",
     anatomy:
-      "Each kidney contains about 1 million nephrons. Divided into cortex and medulla. Blood enters via renal arteries and exits via renal veins. Urine collects in the renal pelvis.",
+      "Cada riñón contiene aproximadamente 1 millón de nefronas. Dividido en corteza y médula. La sangre entra por las arterias renales y sale por las venas renales. La orina se acumula en la pelvis renal.",
     keyFacts: [
-      "Filter approximately 180 liters of blood daily",
-      "Produce 1-2 liters of urine daily",
-      "Receive 20-25% of cardiac output",
-      "Regulate blood pressure through the renin-angiotensin system",
+      "Filtran aproximadamente 180 litros de sangre diariamente",
+      "Producen 1-2 litros de orina diariamente",
+      "Reciben el 20-25% del gasto cardíaco",
+      "Regulan la presión arterial mediante el sistema renina-angiotensina",
     ],
     clinicalSignificance:
-      "Kidney disease is increasingly common, particularly in diabetes and hypertension. End-stage renal disease requires dialysis or transplantation.",
+      "La enfermedad renal es cada vez más común, particularmente en diabetes e hipertensión. La enfermedad renal en etapa terminal requiere diálisis o trasplante.",
     conditions: [
-      "Chronic kidney disease",
-      "Acute kidney injury",
-      "Kidney stones (nephrolithiasis)",
-      "Glomerulonephritis",
-      "Polycystic kidney disease",
-      "Renal cell carcinoma",
+      "Enfermedad renal crónica",
+      "Lesión renal aguda",
+      "Cálculos renales (nefrolitiasis)",
+      "Glomerulonefritis",
+      "Enfermedad renal poliquística",
+      "Carcinoma de células renales",
     ],
     relatedStructures: ["UBERON_0000948", "UBERON_0001255", "UBERON_0000178"],
     furtherReading: [
       "Brenner & Rector's The Kidney",
       "Comprehensive Clinical Nephrology - Johnson",
-      "The Kidney: Physiology and Pathophysiology - Seldin & Giebisch",
     ],
   },
 
   UBERON_0001255: {
-    name: "Urinary Bladder",
+    name: "Vejiga Urinaria",
     description:
-      "A hollow, muscular organ that stores urine produced by the kidneys before elimination through urination. Capable of significant expansion.",
+      "Un órgano muscular hueco que almacena la orina producida por los riñones antes de su eliminación mediante la micción. Capaz de expandirse significativamente.",
     location:
-      "Located in the pelvis, posterior to the pubic symphysis. In males, anterior to the rectum; in females, anterior to the uterus and vagina.",
+      "Ubicada en la pelvis, posterior a la sínfisis púbica. En hombres, anterior al recto; en mujeres, anterior al útero y vagina.",
     anatomy:
-      "Has three layers: mucosa (transitional epithelium), muscularis (detrusor muscle), and adventitia/serosa. The trigone is a triangular region where ureters enter and urethra exits.",
+      "Tiene tres capas: mucosa (epitelio de transición), muscular (músculo detrusor) y adventicia/serosa. El trígono es una región triangular donde entran los uréteres y sale la uretra.",
     keyFacts: [
-      "Can hold 400-600 mL comfortably",
-      "Maximum capacity is about 800-1000 mL",
-      "Urge to void begins at about 200-300 mL",
-      "The detrusor muscle contracts to expel urine",
+      "Puede contener 400-600 mL cómodamente",
+      "La capacidad máxima es de aproximadamente 800-1000 mL",
+      "El deseo de orinar comienza aproximadamente a los 200-300 mL",
+      "El músculo detrusor se contrae para expulsar la orina",
     ],
     clinicalSignificance:
-      "Bladder dysfunction is common, particularly with aging. Bladder cancer is one of the most common malignancies, especially in smokers.",
+      "La disfunción vesical es común, particularmente con el envejecimiento. El cáncer de vejiga es una de las neoplasias malignas más comunes, especialmente en fumadores.",
     conditions: [
-      "Bladder cancer",
-      "Urinary tract infections",
-      "Overactive bladder",
-      "Urinary incontinence",
-      "Neurogenic bladder",
+      "Cáncer de vejiga",
+      "Infecciones del tracto urinario",
+      "Vejiga hiperactiva",
+      "Incontinencia urinaria",
+      "Vejiga neurogénica",
     ],
     relatedStructures: ["UBERON_0002113", "UBERON_0001000", "UBERON_0000989"],
     furtherReading: [
@@ -464,121 +463,29 @@ export const anatomyData = {
     ],
   },
 
-  // === MUSCULOSKELETAL ===
-  UBERON_0001013: {
-    name: "Skeletal Muscle",
-    description:
-      "Voluntary muscle tissue attached to bones, responsible for body movement, posture maintenance, and heat production. Comprises about 40% of body weight.",
-    location:
-      "Distributed throughout the body, attached to bones via tendons. Major muscle groups include those of the limbs, trunk, head, and neck.",
-    anatomy:
-      "Composed of long, multinucleated fibers with characteristic striations. Organized into fascicles wrapped in connective tissue. Contains slow-twitch and fast-twitch fibers.",
-    keyFacts: [
-      "The human body has over 600 skeletal muscles",
-      "Muscle contraction generates 85% of body heat",
-      "Largest muscle is the gluteus maximus",
-      "Smallest muscle is the stapedius in the ear",
-    ],
-    clinicalSignificance:
-      "Muscle weakness and wasting occur in numerous conditions. Maintaining muscle mass is important for metabolic health and functional independence.",
-    conditions: [
-      "Muscular dystrophies",
-      "Myasthenia gravis",
-      "Polymyositis",
-      "Sarcopenia (age-related muscle loss)",
-      "Rhabdomyolysis",
-    ],
-    relatedStructures: ["UBERON_0002481", "UBERON_0001021", "UBERON_0000947"],
-    furtherReading: [
-      "Myology - Engel & Franzini-Armstrong",
-      "Skeletal Muscle: Form and Function - MacIntosh",
-    ],
-  },
-
-  UBERON_0002481: {
-    name: "Bone Tissue",
-    description:
-      "Mineralized connective tissue that forms the skeleton, providing structural support, protection for organs, mineral storage, and housing bone marrow for blood cell production.",
-    location:
-      "Forms the entire skeleton of the body, including axial (skull, spine, ribs) and appendicular (limbs) bones.",
-    anatomy:
-      "Composed of compact (cortical) and spongy (trabecular) bone. Contains osteocytes, osteoblasts, and osteoclasts. Continually remodeled throughout life.",
-    keyFacts: [
-      "The adult skeleton contains 206 bones",
-      "Bone is constantly being remodeled (turnover every 10 years)",
-      "Stores 99% of body's calcium",
-      "Red bone marrow produces blood cells",
-    ],
-    clinicalSignificance:
-      "Bone health is crucial for mobility and quality of life. Osteoporosis affects millions and increases fracture risk.",
-    conditions: [
-      "Osteoporosis",
-      "Osteoarthritis",
-      "Fractures",
-      "Bone cancer (primary and metastatic)",
-      "Osteomyelitis",
-    ],
-    relatedStructures: ["UBERON_0001013", "UBERON_0002371", "UBERON_0001021"],
-    furtherReading: [
-      "Primer on the Metabolic Bone Diseases - ASBMR",
-      "Bone Histomorphometry - Recker",
-    ],
-  },
-
-  // === SKIN ===
-  UBERON_0000014: {
-    name: "Skin",
-    description:
-      "The largest organ of the body, forming the primary protective barrier against the environment. Regulates temperature, provides sensation, and synthesizes vitamin D.",
-    location:
-      "Covers the entire external surface of the body, with a total area of approximately 1.5-2 m² in adults.",
-    anatomy:
-      "Consists of three layers: epidermis (outer, keratinized), dermis (connective tissue), and hypodermis (subcutaneous fat). Contains hair follicles, sweat glands, and sebaceous glands.",
-    keyFacts: [
-      "Weighs approximately 3.5 kg (about 16% of body weight)",
-      "Completely renews itself every 2-3 weeks",
-      "Contains about 20 blood vessels per cm²",
-      "Has approximately 300 sweat glands per cm²",
-    ],
-    clinicalSignificance:
-      "Skin conditions are extremely common and range from cosmetic concerns to life-threatening malignancies. The skin reflects systemic health.",
-    conditions: [
-      "Melanoma and other skin cancers",
-      "Psoriasis",
-      "Eczema (atopic dermatitis)",
-      "Acne",
-      "Skin infections",
-    ],
-    relatedStructures: ["UBERON_0001013", "UBERON_0000178", "UBERON_0000966"],
-    furtherReading: [
-      "Fitzpatrick's Dermatology",
-      "Skin: A Natural History - Jablonski",
-    ],
-  },
-
-  // === ENDOCRINE ===
+  // === ENDOCRINO ===
   UBERON_0002369: {
-    name: "Adrenal Gland",
+    name: "Glándula Suprarrenal",
     description:
-      "Paired endocrine glands located above the kidneys, producing hormones essential for metabolism, stress response, blood pressure regulation, and sexual characteristics.",
+      "Glándulas endocrinas pares ubicadas encima de los riñones, que producen hormonas esenciales para el metabolismo, respuesta al estrés, regulación de la presión arterial y características sexuales.",
     location:
-      "Situated on top of each kidney in the retroperitoneal space. The right is triangular, the left is crescentic.",
+      "Situadas encima de cada riñón en el espacio retroperitoneal. La derecha es triangular, la izquierda es crescéntica.",
     anatomy:
-      "Each gland has two distinct regions: outer cortex (produces corticosteroids and androgens) and inner medulla (produces catecholamines - epinephrine and norepinephrine).",
+      "Cada glándula tiene dos regiones distintas: corteza externa (produce corticosteroides y andrógenos) y médula interna (produce catecolaminas - adrenalina y noradrenalina).",
     keyFacts: [
-      "Produce over 50 different hormones",
-      "Cortisol follows a circadian rhythm (highest in morning)",
-      "The medulla is derived from neural crest cells",
-      'Essential for the "fight or flight" response',
+      "Producen más de 50 hormonas diferentes",
+      "El cortisol sigue un ritmo circadiano (más alto por la mañana)",
+      "La médula deriva de células de la cresta neural",
+      'Esencial para la respuesta de "lucha o huida"',
     ],
     clinicalSignificance:
-      "Adrenal dysfunction can cause life-threatening conditions. Both excess and deficiency of adrenal hormones cause significant disease.",
+      "La disfunción suprarrenal puede causar condiciones potencialmente mortales. Tanto el exceso como la deficiencia de hormonas suprarrenales causan enfermedad significativa.",
     conditions: [
-      "Addison's disease (adrenal insufficiency)",
-      "Cushing's syndrome (cortisol excess)",
-      "Pheochromocytoma (adrenal medulla tumor)",
-      "Adrenal incidentaloma",
-      "Congenital adrenal hyperplasia",
+      "Enfermedad de Addison (insuficiencia suprarrenal)",
+      "Síndrome de Cushing (exceso de cortisol)",
+      "Feocromocitoma (tumor de médula suprarrenal)",
+      "Incidentaloma suprarrenal",
+      "Hiperplasia suprarrenal congénita",
     ],
     relatedStructures: ["UBERON_0002113", "UBERON_0002046", "UBERON_0001898"],
     furtherReading: [
@@ -588,27 +495,27 @@ export const anatomyData = {
   },
 
   UBERON_0002046: {
-    name: "Thyroid Gland",
+    name: "Glándula Tiroides",
     description:
-      "A butterfly-shaped endocrine gland in the neck that produces thyroid hormones, which regulate metabolism, growth, development, and body temperature.",
+      "Una glándula endocrina en forma de mariposa en el cuello que produce hormonas tiroideas, las cuales regulan el metabolismo, crecimiento, desarrollo y temperatura corporal.",
     location:
-      "Located in the anterior neck, wrapped around the front and sides of the trachea, just below the larynx.",
+      "Ubicada en el cuello anterior, envolviendo la parte frontal y lateral de la tráquea, justo debajo de la laringe.",
     anatomy:
-      "Consists of two lobes connected by the isthmus. Contains follicles filled with colloid (thyroglobulin). Produces T3 and T4 hormones and calcitonin from parafollicular C cells.",
+      "Consiste en dos lóbulos conectados por el istmo. Contiene folículos llenos de coloide (tiroglobulina). Produce hormonas T3 y T4 y calcitonina de las células C parafoliculares.",
     keyFacts: [
-      "Largest endocrine gland in the body",
-      "Requires iodine for hormone synthesis",
-      "Thyroid hormone affects virtually every cell in the body",
-      "Normal weight is 15-25 grams",
+      "Glándula endocrina más grande del cuerpo",
+      "Requiere yodo para la síntesis hormonal",
+      "La hormona tiroidea afecta prácticamente cada célula del cuerpo",
+      "Peso normal es 15-25 gramos",
     ],
     clinicalSignificance:
-      "Thyroid disorders are common, affecting about 5% of the population. Both hyper- and hypothyroidism cause significant symptoms.",
+      "Los trastornos tiroideos son comunes, afectando aproximadamente al 5% de la población. Tanto el hiper como el hipotiroidismo causan síntomas significativos.",
     conditions: [
-      "Hypothyroidism (Hashimoto's thyroiditis)",
-      "Hyperthyroidism (Graves' disease)",
-      "Thyroid nodules",
-      "Thyroid cancer",
-      "Goiter",
+      "Hipotiroidismo (tiroiditis de Hashimoto)",
+      "Hipertiroidismo (enfermedad de Graves)",
+      "Nódulos tiroideos",
+      "Cáncer de tiroides",
+      "Bocio",
     ],
     relatedStructures: ["UBERON_0002369", "UBERON_0001898", "UBERON_0001043"],
     furtherReading: [
@@ -617,29 +524,29 @@ export const anatomyData = {
     ],
   },
 
-  // === LYMPHATIC ===
+  // === LINFÁTICO ===
   UBERON_0002106: {
-    name: "Spleen",
+    name: "Bazo",
     description:
-      "The largest lymphoid organ, filtering blood, recycling iron from old red blood cells, and serving as a reservoir of immune cells and platelets.",
+      "El órgano linfoide más grande, que filtra la sangre, recicla hierro de glóbulos rojos viejos y sirve como reservorio de células inmunes y plaquetas.",
     location:
-      "Located in the left upper quadrant of the abdomen, posterior to the stomach and protected by the lower left ribs.",
+      "Ubicado en el cuadrante superior izquierdo del abdomen, posterior al estómago y protegido por las costillas inferiores izquierdas.",
     anatomy:
-      "Contains red pulp (filters blood) and white pulp (immune function). Receives blood via the splenic artery. Has no afferent lymphatic vessels.",
+      "Contiene pulpa roja (filtra sangre) y pulpa blanca (función inmune). Recibe sangre a través de la arteria esplénica. No tiene vasos linfáticos aferentes.",
     keyFacts: [
-      "Filters about 250 mL of blood per minute",
-      "Can hold about 200 mL of blood in reserve",
-      "Removes old or damaged red blood cells",
-      "Important for immunity against encapsulated bacteria",
+      "Filtra aproximadamente 250 mL de sangre por minuto",
+      "Puede retener aproximadamente 200 mL de sangre en reserva",
+      "Elimina glóbulos rojos viejos o dañados",
+      "Importante para la inmunidad contra bacterias encapsuladas",
     ],
     clinicalSignificance:
-      "Splenomegaly can indicate various diseases. Asplenic patients are at increased risk for serious infections with encapsulated organisms.",
+      "La esplenomegalia puede indicar varias enfermedades. Los pacientes asplénicos tienen mayor riesgo de infecciones graves con organismos encapsulados.",
     conditions: [
-      "Splenomegaly (enlarged spleen)",
-      "Splenic rupture (trauma)",
-      "Splenic infarction",
-      "Hypersplenism",
-      "Asplenia (functional or surgical)",
+      "Esplenomegalia (bazo agrandado)",
+      "Ruptura esplénica (trauma)",
+      "Infarto esplénico",
+      "Hiperesplenismo",
+      "Asplenia (funcional o quirúrgica)",
     ],
     relatedStructures: ["UBERON_0002107", "UBERON_0000178", "UBERON_0002371"],
     furtherReading: [
@@ -648,176 +555,28 @@ export const anatomyData = {
     ],
   },
 
-  // === REPRODUCTIVE (Male) ===
-  UBERON_0000473: {
-    name: "Testis",
-    description:
-      "The male gonad, responsible for producing sperm and testosterone. Essential for male fertility and secondary sexual characteristics.",
-    location:
-      "Located within the scrotum, outside the body cavity to maintain the lower temperature required for spermatogenesis.",
-    anatomy:
-      "Contains seminiferous tubules (where sperm are produced) and Leydig cells (which produce testosterone). Connected to the body via the spermatic cord.",
-    keyFacts: [
-      "Produces 100-200 million sperm daily",
-      "Optimal temperature for function is 2-4°C below body temperature",
-      "Testosterone production begins at puberty",
-      "The left testis usually hangs lower than the right",
-    ],
-    clinicalSignificance:
-      "Testicular cancer is the most common cancer in young men but highly treatable. Testicular dysfunction affects fertility and hormone balance.",
-    conditions: [
-      "Testicular cancer",
-      "Cryptorchidism (undescended testis)",
-      "Testicular torsion",
-      "Varicocele",
-      "Hypogonadism",
-    ],
-    relatedStructures: ["UBERON_0000998", "UBERON_0001000", "UBERON_0002369"],
-    furtherReading: [
-      "Campbell-Walsh Urology - Male Reproductive System",
-      "Spermatogenesis - Griswold",
-    ],
-  },
-
-  UBERON_0000989: {
-    name: "Penis",
-    description:
-      "The male copulatory organ, serving functions in urination and sexual reproduction. Contains erectile tissue that enables erection.",
-    location:
-      "External male genital organ, anterior to the scrotum, suspended from the pubic arch.",
-    anatomy:
-      "Contains three cylindrical bodies of erectile tissue: paired corpora cavernosa and single corpus spongiosum (which surrounds the urethra). The glans is the distal expanded end.",
-    keyFacts: [
-      "Erection is primarily a vascular event",
-      "Average length is 12-16 cm when erect",
-      "The urethra serves both urinary and reproductive functions",
-      "Foreskin (prepuce) covers the glans in uncircumcised males",
-    ],
-    clinicalSignificance:
-      "Erectile dysfunction is common and often indicates cardiovascular disease. Penile conditions affect quality of life and may indicate systemic disease.",
-    conditions: [
-      "Erectile dysfunction",
-      "Peyronie's disease",
-      "Penile cancer",
-      "Priapism",
-      "Phimosis",
-    ],
-    relatedStructures: ["UBERON_0000473", "UBERON_0001255", "UBERON_0001000"],
-    furtherReading: ["Campbell-Walsh Urology", "Sexual Medicine - McMahon"],
-  },
-
-  // === BLOOD ===
-  UBERON_0000178: {
-    name: "Blood",
-    description:
-      "A specialized connective tissue consisting of cells suspended in plasma, responsible for transporting oxygen, nutrients, hormones, and immune cells throughout the body.",
-    location:
-      "Circulates through the cardiovascular system, present in all blood vessels from large arteries to microscopic capillaries.",
-    anatomy:
-      "Composed of plasma (55%) and formed elements (45%): red blood cells, white blood cells, and platelets. Total blood volume is approximately 4.7-5.5 liters.",
-    keyFacts: [
-      "Red blood cells live about 120 days",
-      "About 2 million red blood cells are produced every second",
-      "Blood travels about 19,000 km through vessels daily",
-      "Plasma is 92% water",
-    ],
-    clinicalSignificance:
-      "Blood disorders affect oxygen transport, immunity, and clotting. Complete blood count is one of the most common medical tests.",
-    conditions: [
-      "Anemia (various types)",
-      "Leukemia",
-      "Bleeding disorders (hemophilia)",
-      "Thrombocytopenia",
-      "Sickle cell disease",
-    ],
-    relatedStructures: ["UBERON_0000948", "UBERON_0002106", "UBERON_0002371"],
-    furtherReading: [
-      "Williams Hematology",
-      "Wintrobe's Clinical Hematology",
-      "Blood: Physiology and Pathophysiology - Colman",
-    ],
-  },
-
-  UBERON_0002371: {
-    name: "Bone Marrow",
-    description:
-      "Soft tissue found in the hollow interior of bones, responsible for producing all blood cells (hematopoiesis). Contains both red (hematopoietic) and yellow (fatty) marrow.",
-    location:
-      "Found within the medullary cavities of long bones and in the cancellous tissue of flat bones such as the pelvis, sternum, and skull.",
-    anatomy:
-      "Red marrow contains hematopoietic stem cells and supporting stromal cells. Yellow marrow is primarily adipose tissue that can convert to red marrow if needed.",
-    keyFacts: [
-      "Produces about 500 billion blood cells daily",
-      "In adults, red marrow is mainly in flat bones and vertebrae",
-      "Contains stem cells capable of becoming any blood cell type",
-      "Site of B lymphocyte maturation",
-    ],
-    clinicalSignificance:
-      "Bone marrow disorders affect blood cell production. Bone marrow transplantation can cure certain blood cancers and other conditions.",
-    conditions: [
-      "Leukemia",
-      "Multiple myeloma",
-      "Aplastic anemia",
-      "Myelodysplastic syndromes",
-      "Bone marrow failure syndromes",
-    ],
-    relatedStructures: ["UBERON_0000178", "UBERON_0002481", "UBERON_0002106"],
-    furtherReading: ["Williams Hematology", "Bone Marrow Pathology - Bain"],
-  },
-
-  // === EYE ===
-  UBERON_0000970: {
-    name: "Eye",
-    description:
-      "The organ of sight, a complex structure that detects light and converts it to electrochemical signals processed by the visual cortex of the brain.",
-    location:
-      "Housed within the bony orbits of the skull, protected by the eyelids and cushioned by orbital fat.",
-    anatomy:
-      "Consists of three layers: outer fibrous (cornea, sclera), middle vascular (uvea), and inner neural (retina). Contains lens, vitreous humor, and photoreceptors.",
-    keyFacts: [
-      "Contains about 130 million photoreceptor cells",
-      "The eye can distinguish about 10 million colors",
-      "Cornea has no blood vessels (transparent)",
-      "The retina processes 10 million bits of data per second",
-    ],
-    clinicalSignificance:
-      "Vision impairment significantly affects quality of life. Many eye conditions are treatable if detected early.",
-    conditions: [
-      "Cataracts",
-      "Glaucoma",
-      "Macular degeneration",
-      "Diabetic retinopathy",
-      "Retinal detachment",
-    ],
-    relatedStructures: ["UBERON_0000955", "UBERON_0001871", "UBERON_0000966"],
-    furtherReading: [
-      "Adler's Physiology of the Eye",
-      "Clinical Ophthalmology - Kanski",
-    ],
-  },
-
-  // === PANCREAS ===
+  // === PÁNCREAS ===
   UBERON_0001264: {
-    name: "Pancreas",
+    name: "Páncreas",
     description:
-      "A dual-function organ serving both digestive (exocrine) and hormonal (endocrine) roles. Produces digestive enzymes and hormones including insulin and glucagon.",
+      "Un órgano de doble función que sirve roles tanto digestivos (exocrinos) como hormonales (endocrinos). Produce enzimas digestivas y hormonas incluyendo insulina y glucagón.",
     location:
-      "Located retroperitoneally in the upper abdomen, behind the stomach, spanning from the duodenum to the spleen.",
+      "Ubicado retroperitonealmente en el abdomen superior, detrás del estómago, extendiéndose desde el duodeno hasta el bazo.",
     anatomy:
-      "Divided into head, neck, body, and tail. Contains exocrine acinar cells (digestive enzymes) and endocrine islets of Langerhans (hormone-producing cells).",
+      "Dividido en cabeza, cuello, cuerpo y cola. Contiene células acinares exocrinas (enzimas digestivas) e islotes de Langerhans endocrinos (células productoras de hormonas).",
     keyFacts: [
-      "Produces about 1.5 liters of pancreatic juice daily",
-      "Contains about 1 million islets of Langerhans",
-      "Beta cells in islets produce insulin",
-      "Alpha cells produce glucagon",
+      "Produce aproximadamente 1,5 litros de jugo pancreático diariamente",
+      "Contiene aproximadamente 1 millón de islotes de Langerhans",
+      "Las células beta en los islotes producen insulina",
+      "Las células alfa producen glucagón",
     ],
     clinicalSignificance:
-      "Pancreatic dysfunction affects both digestion and glucose metabolism. Pancreatic cancer has one of the lowest survival rates.",
+      "La disfunción pancreática afecta tanto la digestión como el metabolismo de la glucosa. El cáncer de páncreas tiene una de las tasas de supervivencia más bajas.",
     conditions: [
-      "Diabetes mellitus (Type 1 and 2)",
-      "Acute and chronic pancreatitis",
-      "Pancreatic cancer",
-      "Pancreatic insufficiency",
+      "Diabetes mellitus (Tipo 1 y 2)",
+      "Pancreatitis aguda y crónica",
+      "Cáncer de páncreas",
+      "Insuficiencia pancreática",
       "Insulinoma",
     ],
     relatedStructures: ["UBERON_0000945", "UBERON_0002107", "UBERON_0001155"],
@@ -827,26 +586,57 @@ export const anatomyData = {
     ],
   },
 
-  // Default/fallback for unknown structures
-  default: {
-    name: "Anatomical Structure",
+  // === OJO ===
+  UBERON_0000970: {
+    name: "Ojo",
     description:
-      "An anatomical structure identified by UBERON ontology. Select a highlighted region for detailed information.",
-    location: "Location varies by structure.",
-    anatomy: "Anatomical details available upon selection.",
+      "El órgano de la visión, una estructura compleja que detecta la luz y la convierte en señales electroquímicas procesadas por la corteza visual del cerebro.",
+    location:
+      "Alojado dentro de las órbitas óseas del cráneo, protegido por los párpados y amortiguado por grasa orbital.",
+    anatomy:
+      "Consiste en tres capas: externa fibrosa (córnea, esclerótica), media vascular (úvea) e interna neural (retina). Contiene cristalino, humor vítreo y fotorreceptores.",
     keyFacts: [
-      "Part of the human body",
-      "Identified using UBERON ontology identifiers",
+      "Contiene aproximadamente 130 millones de células fotorreceptoras",
+      "El ojo puede distinguir aproximadamente 10 millones de colores",
+      "La córnea no tiene vasos sanguíneos (transparente)",
+      "La retina procesa 10 millones de bits de datos por segundo",
     ],
     clinicalSignificance:
-      "Clinical relevance depends on the specific structure.",
-    conditions: ["Various conditions may affect this structure"],
+      "El deterioro de la visión afecta significativamente la calidad de vida. Muchas condiciones oculares son tratables si se detectan tempranamente.",
+    conditions: [
+      "Cataratas",
+      "Glaucoma",
+      "Degeneración macular",
+      "Retinopatía diabética",
+      "Desprendimiento de retina",
+    ],
+    relatedStructures: ["UBERON_0000955", "UBERON_0001871", "UBERON_0000966"],
+    furtherReading: [
+      "Adler's Physiology of the Eye",
+      "Clinical Ophthalmology - Kanski",
+    ],
+  },
+
+  // Predeterminado/fallback para estructuras desconocidas
+  default: {
+    name: "Estructura Anatómica",
+    description:
+      "Una estructura anatómica identificada por la ontología UBERON. Selecciona una región resaltada para obtener información detallada.",
+    location: "La ubicación varía según la estructura.",
+    anatomy: "Los detalles anatómicos están disponibles al seleccionar.",
+    keyFacts: [
+      "Parte del cuerpo humano",
+      "Identificado usando identificadores de ontología UBERON",
+    ],
+    clinicalSignificance:
+      "La relevancia clínica depende de la estructura específica.",
+    conditions: ["Varias condiciones pueden afectar esta estructura"],
     relatedStructures: [],
     furtherReading: ["Gray's Anatomy", "Netter's Atlas of Human Anatomy"],
   },
 };
 
-// Helper to get structure data with fallback
+// Ayudante para obtener datos de estructura con fallback
 export function getStructureData(uberonId) {
   return (
     anatomyData[uberonId] || {
@@ -856,13 +646,12 @@ export function getStructureData(uberonId) {
   );
 }
 
-// Format UBERON ID to readable name
+// Formatear ID UBERON a nombre legible
 export function formatStructureName(uberonId) {
-  // Try to extract name from SVG title element, or format the ID
   return uberonId.replace("UBERON_", "").replace("CL_", "").replace(/_/g, " ");
 }
 
-// Get related structures that exist in our data
+// Obtener estructuras relacionadas que existen en nuestros datos
 export function getRelatedStructures(uberonId) {
   const data = anatomyData[uberonId];
   if (!data || !data.relatedStructures) return [];

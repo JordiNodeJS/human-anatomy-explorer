@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Human Anatomy Explorer</title>
+    <title>Explorador de Anatomía Humana</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,9 +17,9 @@
     <div class="app">
       <header class="header">
         <div class="header-content">
-          <h1 class="title">Human Anatomy Explorer</h1>
+          <h1 class="title">Explorador de Anatomía Humana</h1>
           <p class="subtitle">
-            Interactive anatomical reference with UBERON ontology
+            Referencia anatómica interactiva con ontología UBERON
           </p>
         </div>
       </header>
@@ -28,11 +28,11 @@
         <nav class="view-switcher">
           <button class="view-btn active" data-view="male">
             <span class="view-icon">◉</span>
-            Full Body
+            Cuerpo Completo
           </button>
           <button class="view-btn" data-view="brain">
             <span class="view-icon">◎</span>
-            Brain Detail
+            Detalle Cerebral
           </button>
         </nav>
 
@@ -40,24 +40,28 @@
           <section class="diagram-panel">
             <div class="diagram-container" id="diagram-container">
               <div class="diagram-wrapper" id="male-diagram" data-active="true">
-                <!-- SVG will be injected here -->
+                <!-- SVG se inyectará aquí -->
               </div>
               <div
                 class="diagram-wrapper"
                 id="brain-diagram"
                 data-active="false"
               >
-                <!-- SVG will be injected here -->
+                <!-- SVG se inyectará aquí -->
               </div>
             </div>
             <div class="diagram-controls">
-              <button class="control-btn" id="zoom-in" title="Zoom in">
+              <button class="control-btn" id="zoom-in" title="Acercar">
                 +
               </button>
-              <button class="control-btn" id="zoom-out" title="Zoom out">
+              <button class="control-btn" id="zoom-out" title="Alejar">
                 −
               </button>
-              <button class="control-btn" id="zoom-reset" title="Reset view">
+              <button
+                class="control-btn"
+                id="zoom-reset"
+                title="Restablecer vista"
+              >
                 ⟲
               </button>
             </div>
@@ -65,27 +69,29 @@
 
           <aside class="info-panel">
             <div class="info-header">
-              <h2 class="info-title" id="structure-name">Select a structure</h2>
+              <h2 class="info-title" id="structure-name">
+                Selecciona una estructura
+              </h2>
               <span class="ontology-id" id="ontology-id"></span>
             </div>
 
             <div class="tabs">
-              <button class="tab active" data-tab="overview">Overview</button>
-              <button class="tab" data-tab="anatomy">Anatomy</button>
-              <button class="tab" data-tab="clinical">Clinical</button>
-              <button class="tab" data-tab="references">References</button>
+              <button class="tab active" data-tab="overview">Resumen</button>
+              <button class="tab" data-tab="anatomy">Anatomía</button>
+              <button class="tab" data-tab="clinical">Clínica</button>
+              <button class="tab" data-tab="references">Referencias</button>
             </div>
 
             <div class="tab-content">
               <div class="tab-pane active" id="overview-pane">
                 <div class="placeholder-message" id="overview-placeholder">
                   <p>
-                    Hover over or click any anatomical structure to explore
-                    detailed information.
+                    Pasa el cursor o haz clic en cualquier estructura anatómica
+                    para explorar información detallada.
                   </p>
                   <p class="hint">
-                    The diagram displays human anatomy with standardized UBERON
-                    ontology identifiers.
+                    El diagrama muestra la anatomía humana con identificadores
+                    estandarizados de la ontología UBERON.
                   </p>
                 </div>
                 <div
@@ -93,73 +99,75 @@
                   id="overview-content"
                   style="display: none"
                 >
-                  <h3>Description</h3>
+                  <h3>Descripción</h3>
                   <p id="structure-description"></p>
 
-                  <h3>Key Facts</h3>
+                  <h3>Datos Clave</h3>
                   <ul class="facts-list" id="key-facts"></ul>
                 </div>
               </div>
 
               <div class="tab-pane" id="anatomy-pane">
                 <div class="placeholder-message">
-                  <p>Select a structure to view anatomical details.</p>
+                  <p>Selecciona una estructura para ver detalles anatómicos.</p>
                 </div>
                 <div
                   class="info-content"
                   id="anatomy-content"
                   style="display: none"
                 >
-                  <h3>Location</h3>
+                  <h3>Ubicación</h3>
                   <p id="structure-location"></p>
 
-                  <h3>Structure</h3>
+                  <h3>Estructura</h3>
                   <p id="structure-anatomy"></p>
 
-                  <h3>Related Structures</h3>
+                  <h3>Estructuras Relacionadas</h3>
                   <ul class="related-list" id="related-structures"></ul>
                 </div>
               </div>
 
               <div class="tab-pane" id="clinical-pane">
                 <div class="placeholder-message">
-                  <p>Select a structure to view clinical relevance.</p>
+                  <p>
+                    Selecciona una estructura para ver su relevancia clínica.
+                  </p>
                 </div>
                 <div
                   class="info-content"
                   id="clinical-content"
                   style="display: none"
                 >
-                  <h3>Clinical Significance</h3>
+                  <h3>Significado Clínico</h3>
                   <p id="clinical-significance"></p>
 
-                  <h3>Common Conditions</h3>
+                  <h3>Condiciones Comunes</h3>
                   <ul class="conditions-list" id="common-conditions"></ul>
                 </div>
               </div>
 
               <div class="tab-pane" id="references-pane">
                 <div class="placeholder-message">
-                  <p>Select a structure to view references.</p>
+                  <p>Selecciona una estructura para ver referencias.</p>
                 </div>
                 <div
                   class="info-content"
                   id="references-content"
                   style="display: none"
                 >
-                  <h3>Ontology Links</h3>
+                  <h3>Enlaces de Ontología</h3>
                   <div class="reference-links" id="ontology-links"></div>
 
-                  <h3>Further Reading</h3>
+                  <h3>Lecturas Adicionales</h3>
                   <ul class="reading-list" id="further-reading"></ul>
                 </div>
               </div>
             </div>
 
             <div class="selection-history">
-              <h4>Recently Viewed</h4>
+              <h4>Visto Recientemente</h4>
               <div class="history-items" id="history-items">
-                <span class="history-empty">No structures viewed yet</span>
+                <span class="history-empty">Ninguna estructura vista aún</span>
               </div>
             </div>
           </aside>
@@ -168,14 +176,14 @@
 
       <footer class="footer">
         <p>
-          Anatomogram illustrations ©
+          Ilustraciones de Anatomogram ©
           <a href="https://www.ebi.ac.uk/gxa" target="_blank"
             >Expression Atlas, EMBL-EBI</a
           >
-          under CC BY 4.0
+          bajo licencia CC BY 4.0
         </p>
         <p>
-          Ontology data from
+          Datos de ontología de
           <a href="http://uberon.org" target="_blank">UBERON</a>
         </p>
       </footer>

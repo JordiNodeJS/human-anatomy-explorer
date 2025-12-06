@@ -1,12 +1,15 @@
 /**
- * Human Anatomy Explorer - Main Application
- * Interactive anatomical reference with UBERON ontology
+ * Explorador de Anatomía Humana - Aplicación Principal
+ * Referencia anatómica interactiva con ontología UBERON
  */
 
 import { getStructureData, getRelatedStructures } from "./anatomyData.js";
 import { audioFeedback } from "./audioFeedback.js";
 
-// Application state
+// Traducciones de nombres anatómicos
+let translations = {};
+
+// Estado de la aplicación
 const state = {
   currentView: "male",
   selectedStructure: null,
@@ -15,31 +18,64 @@ const state = {
   maxHistory: 8,
 };
 
-// DOM element references
+// Referencias a elementos del DOM
 let elements = {};
 
 /**
- * Initialize the application
+ * Cargar traducciones de nombres anatómicos
  */
-async function init() {
-  // Cache DOM elements
-  cacheElements();
-
-  // Load SVG diagrams
-  await loadDiagrams();
-
-  // Set up event listeners
-  setupEventListeners();
-
-  // Initialize audio (will be enabled on first user interaction)
-  document.addEventListener("click", initAudio, { once: true });
-  document.addEventListener("keydown", initAudio, { once: true });
-
-  console.log("Human Anatomy Explorer initialized");
+async function loadTranslations() {
+  try {
+    const res = await fetch("/locales/es.json");
+    if (res.ok) {
+      translations = await res.json();
+    }
+  } catch (err) {
+    console.warn("No se pudieron cargar las traducciones:", err);
+  }
 }
 
 /**
- * Cache DOM element references
+ * Obtener nombre traducido para un ID UBERON
+ */
+function getTranslatedName(id, fallbackName) {
+  // 1) Buscar en traducciones
+  if (translations[id]) {
+    return translations[id];
+  }
+  // 2) Usar nombre del SVG si existe
+  if (fallbackName) {
+    return capitalizeWords(fallbackName);
+  }
+  // 3) Formatear el ID como fallback
+  return formatIdToName(id);
+}
+
+/**
+ * Inicializar la aplicación
+ */
+async function init() {
+  // Cachear elementos del DOM
+  cacheElements();
+
+  // Cargar traducciones
+  await loadTranslations();
+
+  // Cargar diagramas SVG
+  await loadDiagrams();
+
+  // Configurar listeners de eventos
+  setupEventListeners();
+
+  // Inicializar audio (se habilitará en la primera interacción del usuario)
+  document.addEventListener("click", initAudio, { once: true });
+  document.addEventListener("keydown", initAudio, { once: true });
+
+  console.log("Explorador de Anatomía Humana inicializado");
+}
+
+/**
+ * Cachear referencias a elementos del DOM
  */
 function cacheElements() {
   elements = {
@@ -55,13 +91,13 @@ function cacheElements() {
     zoomIn: document.getElementById("zoom-in"),
     zoomOut: document.getElementById("zoom-out"),
     zoomReset: document.getElementById("zoom-reset"),
-    // Content panes
+    // Paneles de contenido
     overviewPlaceholder: document.getElementById("overview-placeholder"),
     overviewContent: document.getElementById("overview-content"),
     anatomyContent: document.getElementById("anatomy-content"),
     clinicalContent: document.getElementById("clinical-content"),
     referencesContent: document.getElementById("references-content"),
-    // Content fields
+    // Campos de contenido
     structureDescription: document.getElementById("structure-description"),
     keyFacts: document.getElementById("key-facts"),
     structureLocation: document.getElementById("structure-location"),
@@ -75,7 +111,7 @@ function cacheElements() {
 }
 
 /**
- * Initialize audio feedback
+ * Inicializar retroalimentación de audio
  */
 function initAudio() {
   audioFeedback.init();
@@ -186,7 +222,7 @@ function processSvg(svg) {
 }
 
 /**
- * Set up interactions for anatomical structures
+ * Configurar interacciones para estructuras anatómicas
  */
 function setupStructureInteractions(container) {
   const anatomicalElements = container.querySelectorAll(
@@ -194,11 +230,13 @@ function setupStructureInteractions(container) {
   );
 
   anatomicalElements.forEach((element) => {
-    // Get the title element for the structure name
+    // Obtener el elemento title para el nombre de la estructura
     const titleEl = element.querySelector("title");
-    const structureName = titleEl ? titleEl.textContent : formatId(element.id);
+    const svgName = titleEl ? titleEl.textContent : null;
+    // Usar nombre traducido
+    const structureName = getTranslatedName(element.id, svgName);
 
-    // Hover events
+    // Eventos de hover
     element.addEventListener("mouseenter", (e) => {
       audioFeedback.playHover();
       showTooltip(e, element.id, structureName);
@@ -364,7 +402,7 @@ function selectStructure(id, name) {
 }
 
 /**
- * Clear the current selection
+ * Limpiar la selección actual
  */
 function clearSelection() {
   const selected = document.querySelector(".selected");
@@ -374,11 +412,11 @@ function clearSelection() {
 
   state.selectedStructure = null;
 
-  // Reset info panel
-  elements.structureName.textContent = "Select a structure";
+  // Restablecer panel de información
+  elements.structureName.textContent = "Selecciona una estructura";
   elements.ontologyId.textContent = "";
 
-  // Show placeholders, hide content
+  // Mostrar placeholders, ocultar contenido
   elements.overviewPlaceholder.style.display = "block";
   elements.overviewContent.style.display = "none";
   elements.anatomyContent.style.display = "none";
@@ -387,49 +425,46 @@ function clearSelection() {
 }
 
 /**
- * Update the info panel with structure data
+ * Actualizar el panel de información con datos de la estructura
  */
 function updateInfoPanel(id, svgName = null) {
   const data = getStructureData(id);
 
-  // Use data.name if it exists in our database, otherwise capitalize the SVG title
-  const displayName =
-    data && data.name !== formatIdToName(id)
-      ? data.name
-      : capitalizeWords(svgName || formatIdToName(id));
+  // Usar nombre traducido
+  const displayName = getTranslatedName(id, svgName);
 
-  // Update header
+  // Actualizar encabezado
   elements.structureName.textContent = displayName;
   elements.ontologyId.textContent = id;
 
-  // Hide placeholders, show content
+  // Ocultar placeholders, mostrar contenido
   elements.overviewPlaceholder.style.display = "none";
   elements.overviewContent.style.display = "block";
   elements.anatomyContent.style.display = "block";
   elements.clinicalContent.style.display = "block";
   elements.referencesContent.style.display = "block";
 
-  // Hide placeholder in each pane
+  // Ocultar placeholder en cada panel
   document.querySelectorAll(".tab-pane .placeholder-message").forEach((p) => {
     p.style.display = "none";
   });
 
-  // Overview tab
+  // Pestaña Resumen
   elements.structureDescription.textContent = data.description;
   elements.keyFacts.innerHTML = data.keyFacts
     .map((fact) => `<li>${fact}</li>`)
     .join("");
 
-  // Anatomy tab
+  // Pestaña Anatomía
   elements.structureLocation.textContent = data.location;
   elements.structureAnatomy.textContent = data.anatomy;
 
   const relatedStructures = getRelatedStructures(id);
   elements.relatedStructures.innerHTML = relatedStructures
-    .map((s) => `<li data-id="${s.id}">${s.name}</li>`)
+    .map((s) => `<li data-id="${s.id}">${getTranslatedName(s.id, s.name)}</li>`)
     .join("");
 
-  // Add click handlers to related structures
+  // Agregar manejadores de clic a estructuras relacionadas
   elements.relatedStructures.querySelectorAll("li").forEach((li) => {
     li.addEventListener("click", () => {
       const relatedId = li.dataset.id;
@@ -437,7 +472,7 @@ function updateInfoPanel(id, svgName = null) {
     });
   });
 
-  // Clinical tab
+  // Pestaña Clínica
   elements.clinicalSignificance.textContent = data.clinicalSignificance;
   elements.commonConditions.innerHTML = data.conditions
     .map((condition) => `<li>${condition}</li>`)
@@ -475,23 +510,26 @@ function addToHistory(id, name) {
 }
 
 /**
- * Update the history display
+ * Actualizar la visualización del historial
  */
 function updateHistoryUI() {
   if (state.history.length === 0) {
     elements.historyItems.innerHTML =
-      '<span class="history-empty">No structures viewed yet</span>';
+      '<span class="history-empty">Ninguna estructura vista aún</span>';
     return;
   }
 
   elements.historyItems.innerHTML = state.history
     .map(
       (item) =>
-        `<button class="history-item" data-id="${item.id}">${item.name}</button>`
+        `<button class="history-item" data-id="${item.id}">${getTranslatedName(
+          item.id,
+          item.name
+        )}</button>`
     )
     .join("");
 
-  // Add click handlers
+  // Agregar manejadores de clic
   elements.historyItems.querySelectorAll(".history-item").forEach((btn) => {
     btn.addEventListener("click", () => {
       audioFeedback.playButtonClick();
@@ -501,7 +539,7 @@ function updateHistoryUI() {
 }
 
 /**
- * Tooltip management
+ * Gestión de tooltips
  */
 let tooltip = null;
 
