@@ -122,9 +122,8 @@ function initAudio() {
  */
 async function loadDiagrams() {
   const svgPaths = {
-    male: "/node_modules/@ebi-gene-expression-group/anatomogram/lib/svg/homo_sapiens.male.svg",
-    brain:
-      "/node_modules/@ebi-gene-expression-group/anatomogram/lib/svg/homo_sapiens.brain.svg",
+    male: "/svg/homo_sapiens.male.svg",
+    brain: "/svg/homo_sapiens.brain.svg",
   };
 
   // Mostrar estado de carga
